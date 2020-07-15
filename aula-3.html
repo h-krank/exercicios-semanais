@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- MANHÃ 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var primeiraNota = parseInt(prompt('Digite a primeira nota'));
+        var segundaNota = parseInt(prompt('Digite a segunda nota'));
+        var terceiraNota = parseInt(prompt('Digite a terceira nota'));
+
+        var sum = primeiraNota + segundaNota + terceiraNota;
+        var average = sum / 3;
+
+
+        document.write('Primeira nota: ' + primeiraNota);
+        document.write('<br>Segunda nota: ' + segundaNota);
+        document.write('<br>Terceira nota: ' + terceiraNota);
+
+        document.write('<br><br>Soma das notas: ' + sum);
+        document.write('<br>Média das notas: ' + average);
+
+        var body = document.querySelector('body');
+        if (sum >= 60){
+            document.write('<br><h1 style="color:blue">Você foi aprovado</h1>');
+            body.style.backgroundColor = 'lightblue';
+        }
+        else {
+            document.write('<br><h1 style="color:red">Você foi reprovado</h1>');
+            body.style.backgroundColor = 'coral';
+        }
+
+
+    </script>
+
+</body>
+</html>
+-->
+
+
+<!-- TARDE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        /*
+        var nota = 40;
+        
+        if (nota < 40){
+            document.write('Reprovado');
+        }
+        else if(nota >= 40 && nota < 60){
+            document.write('Recuperação');
+        }
+        else {
+            document.write('Aprovado')
+        }
+        */
+
+        /*
+        var base = parseInt(prompt("Insira um número a ser multiplicado"));
+        var length = parseInt(prompt('Insira até onde quer multiplicar'));
+
+        for (var i = 0; i <= length; i++){
+            document.write(base + ' x ' + i + ' = ' + base * i + '<br>');
+        }
+        */
+        var base = parseInt(prompt("Insira um número a ser multiplicado"));
+        var length = parseInt(prompt("Insira até onde quer multiplicar"));
+
+        var i = 0;
+        var evenOrOdd = ''
+
+        while (i < length){
+            
+            if (base * i%2 == 0)
+                evenOrOdd = 'Par'
+            else
+                evenOrOdd = 'Ímpar'
+
+            document.write(base + ' x ' + i + ' = ' + base * i + ' - ' + evenOrOdd + '<br>');
+            
+            i++;
+        }
+
+    </script>
+    
+</body>
+</html>

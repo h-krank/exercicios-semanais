@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        //Syntax is similar to python dict, but behaves more like class objects
+        var celular = {
+            modelo:'Redmi Note 8',
+            apps: ['WhatsApp', 'Instagram', 'Telegram'],
+            price: 1200
+        }
+        console.log(celular.apps)
+
+        //Function syntax
+        function testFunc(n){
+            if (n % 2 == 0){
+                return "Par"
+            
+            return "Ímpar"
+            }
+        }
+        var text = 'text'
+        console.log(`${text} text2`) */
+
+
+
+    </script>
+
+    <script>
+        //#1
+        document.write('<h1>Probelema #1 </h1><br>');
+
+        var endereco = {
+            rua: "Rua dos Pinheiros",
+            numero: 1293,
+            bairro: 'Centro',
+            cidade: 'São Paulo',
+            uf: 'SP'
+        }
+
+        function getUserInfo(x){
+            
+            document.write(`O usuário mora em ${x.cidade} / ${x.uf}, no bairro ${x.bairro}, na rua "${x.rua}" com nº ${x.numero}`);
+        }
+
+        getUserInfo(endereco);
+        
+        //#2
+        document.write('<br><h1> Probelema #2 </h1><br>');
+
+        /*
+        function pares(x, y){
+            
+            for (var i = x; i <= y; i++){
+                if (i % 2 == 0){
+                    document.write(i, '<br>');
+                }
+            }
+        }
+        */
+        function pares(x, y){
+
+            if (x % 2 != 0)
+                x++
+            
+            for (var i = x; i <= y; i+=2){
+                document.write(i + '<br>')
+            }
+        }
+        pares(32, 321);
+
+        //#3
+        document.write('<br><h1> Probelema #3 </h1><br>');
+
+        function temHabilidades(skills){
+            
+            if (skills.indexOf('Javascript') == -1)
+                return false
+            
+            return true
+        }
+
+        var skills = ['Javascript', 'ReactJS', 'React Native'];
+        document.write(temHabilidades(skills));
+        
+        //#4
+        document.write('<br><h1> Probelema #4 </h1><br>');
+
+        function experiencia(anos){
+            switch(anos){
+                
+                case (anos < 1 && anos):
+                    document.write('Iniciante');
+                    break;
+                
+                case (anos <= 3 && anos):
+                    document.write('Intermediario');
+                    break;
+
+                case (anos <= 6 && anos):
+                    document.write('Avançado');
+                    break;
+
+                default:
+                    document.write('Jedi');
+                
+            }
+        }
+
+        var anosEstudo = 3;
+        experiencia(anosEstudo);
+
+        //#5
+        document.write('<br><h1> Probelema #5 </h1><br>');
+
+        var usuarios = [
+            {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+            
+            },
+            {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }            
+        ];
+
+        function getUserSkills(usuarios){
+
+            for (i of usuarios){
+                document.write(`O ${i.nome} possui as habilidades: ${i.habilidades.join(', ')} <br>`);
+            }
+        }
+
+        getUserSkills(usuarios);
+    </script>
+
+
+
+</body>
+</html>

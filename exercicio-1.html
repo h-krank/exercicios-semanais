@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //#1
+        /*
+        var grades = prompt('Insira a quantidade de notas que quiser, separando por ","');
+        grades = grades.split(',')
+        var average = grades.reduce((a,b) => parseInt(a) + parseInt(b), 0);
+        document.write(average + '<br>')
+*/
+
+        //#2
+        /*
+        do{
+            var grades = prompt('Insira 5 notas, separando por ","');
+            grades = grades.split(',')
+        } while(grades.length != 5)  
+
+        for (var i in grades){
+            document.write(grades[i] + '² = ' + grades[i]**2 + '<br>')
+        }
+        */
+        //#3
+        /*
+        do{
+            var grades = prompt('Insira 5 numeros, separando por ","');
+            grades = grades.split(',')
+        } while(grades.length != 5) 
+        document.write (Math.max(...grades))
+        */
+
+        //#4
+        /*
+        var idades = prompt('Insira quantas idades quiser, separando por ","')
+        idades = idades.split(',')
+
+        minor = 0;
+        adult = 0;
+
+        for (i in idades){
+            if (idades[i] < 18)
+                minor++
+            else
+                adult++
+        }
+        document.write("Adultos: " + adult + "<br>" + "Menores: " + minor)
+        */
+
+        //#5
+        /*
+        var usuarios = [
+            {
+            nome: 'Diego',
+            altura: 1.75,
+            sexo: 'masculino',
+            },
+            {
+            nome: 'Gabriel',
+            altura: 1.66,
+            sexo: 'masculino',
+            },
+            {
+            nome: 'Daniela',
+            altura: 1.83,
+            sexo: 'feminino',
+            },
+            {
+            nome: 'Carolina',
+            altura: 1.63,
+            sexo: 'feminino',
+            },
+            {
+            nome: 'Mariana',
+            altura: 1.69,
+            sexo: 'feminino',
+            },
+
+        ];
+        var contaFeminino = 0;
+        var contaMasculino = 0;    
+        function genero(){
+            for (caracteristicas of usuarios){
+                var sexo = caracteristicas.sexo;
+                if(sexo == 'feminino'){
+                contaFeminino++;
+                }else{
+                contaMasculino++;
+                }
+            }
+        }
+        
+        function maiorAlturaDeTodos(){
+            var maiorAltura = usuarios[0].altura;
+            for (caracteristicas of usuarios){
+                var alturaIndividual = caracteristicas.altura;
+                if (alturaIndividual > maiorAltura){
+                    maiorAltura = alturaIndividual;
+                    var maiorPessoa = caracteristicas.nome;
+                }
+            }
+            document.write(`A maior altura ${maiorAltura} é de ${maiorPessoa} <br>`);            
+        }   
+        maiorAlturaDeTodos();
+        genero();
+        document.write(`São ${contaFeminino} mulheres. <br>`);
+        document.write(`São ${contaMasculino} homens. <br>`); 
+        */
+
+        //#5
+        /*
+        var students = prompt('Digite vários nomes, dividios por ","')
+        students = students.split(',')
+        document.write(students.reverse())
+        */
+
+        //#6
+        /*
+        var date = prompt('Digite uma data, separado por "/"')
+        date = date.split('/')
+
+        document.write('Dia: ' + date[0] + 
+                    '<br> Mês: ' + date[1] +
+                    '<br> Ano: ' + date[2])
+        */
+    </script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="nome-usuario">Digite seu email</label>
+        <input id="nome-usuario" type="email" placeholder="exemplo@gmail.com" required> <br>
+
+        <label for="senha">Digite sua senha</label>
+        <input id="senha" type="password"> <br>
+
+        <input type="submit" value="entrar">
+
+        <button type="button" onclick="input()"></button>
+    </form>
+    <script>
+
+    //Problema #1
+
+      function smallest(x, y){
+          return Math.min(x, y)
+      }
+      console.log(smallest(3, 32))
+
+    //Problema #2
+
+    function countLetter(char, string){
+        count = 0
+        
+        for (i of string){
+            if (i == char)
+                count++
+        }
+        return count
+    }
+
+    console.log(countLetter('l', 'Fulano de tal da silva silveira'))
+
+    //Solução em 1 linha
+    function countLetter1(char, string){
+        return string.split('').filter((x) => x == char).length 
+    }
+    
+    function countLetter2(char, string){
+        return string.split(char).length -1
+    }
+
+
+    console.log(countLetter1('l', 'Fulano de tal da silva silveira'))    
+
+    </script>
+    <script>
+        var email = document.getElementById('nome-usuario')
+        var senha = document.getElementById('senha')
+        
+        function input(){
+            if(verificar(email.value, senha.value)){
+                alert('Bem vindo ao nosso sistema')
+            }
+            else{
+                alert('Acesso negado')
+            }
+        }
+
+        function verificar(email, senha){
+            if (email.toLowerCase() == 'admin@admin.com' && senha == '123')
+                return true;
+            return false;
+        }
+
+    </script>
+</body>
+</html>
